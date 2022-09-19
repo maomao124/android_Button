@@ -53,6 +53,10 @@ public class MainActivity extends AppCompatActivity
                 {
                     startActivity(new Intent(MainActivity.this, MainActivity4.class));
                 }
+                else if (v.getId()==R.id.button5)
+                {
+                    startActivity(new Intent(MainActivity.this, MainActivity5.class));
+                }
                 else
                 {
                     //...
@@ -63,7 +67,7 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.button1).setOnClickListener(onClickListener);
         findViewById(R.id.button2).setOnClickListener(onClickListener);
         findViewById(R.id.button3).setOnClickListener(onClickListener);
-
+        findViewById(R.id.button5).setOnClickListener(onClickListener);
 
     }
 }
