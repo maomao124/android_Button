@@ -24,4 +24,12 @@
             android:textSize="16sp"
             android:textAllCaps="false" />
 
+    <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="页面3"
+            android:textSize="16sp"
+            android:textAllCaps="false" />
+
 </LinearLayout>
