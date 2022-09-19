@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity
 
         //也可以不使用匿名内部类的方法设置监听器，也可以使用lambda表达式创建，
         //也可以复用一个View.OnClickListener实例
-        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener()
+/*        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
@@ -34,6 +34,31 @@ public class MainActivity extends AppCompatActivity
             {
                 startActivity(new Intent(MainActivity.this, MainActivity3.class));
             }
-        });
+        });*/
+
+        View.OnClickListener onClickListener = new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if (v.getId() == R.id.button1)
+                {
+                    startActivity(new Intent(MainActivity.this, MainActivity2.class));
+                }
+                else if (v.getId() == R.id.button2)
+                {
+                    startActivity(new Intent(MainActivity.this, MainActivity3.class));
+                }
+                else
+                {
+                    //...
+                }
+            }
+        };
+
+        findViewById(R.id.button1).setOnClickListener(onClickListener);
+        findViewById(R.id.button2).setOnClickListener(onClickListener);
+
+
     }
 }
